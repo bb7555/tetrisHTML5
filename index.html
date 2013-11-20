@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>HTML5 TETRIS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <h1>HTML 5 TETRIS</h1>
+        <section id="gameWrapper">
+        
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="score">score: <span id="result">0</span></div>
+  
+  <div id="stack">
+    <div data-y="0" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="1" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="2" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="3" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="4" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="5" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="6" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="7" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="8" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="9" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="10" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="11" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="12" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="13" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="14" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="15" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="16" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="17" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="18" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+    <div data-y="19" class="line">
+        <div data-x="0" class="brick"></div><div data-x="1" class="brick"></div><div data-x="2" class="brick"></div><div data-x="3" class="brick"></div><div data-x="4" class="brick"></div><div data-x="5" class="brick"></div><div data-x="6" class="brick"></div><div data-x="7" class="brick"></div><div data-x="8" class="brick"></div><div data-x="9" class="brick"></div>
+    </div>
+</div>
+</section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
